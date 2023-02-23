@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   let string = "hello Madam , how are you mam ?"
+   let str = string.toLowerCase() ;
+    // Algo :-
+    // 1. First we will convert this string into substring .
+    // 2. Then we start iterating from the first to value whether it is a
+    // or not by comparing the first and last character of the word then
+    // second and second last and so on .
+    // 3. Then we let an empty string as the largest palindrome .
+    // 4. Now start comparing our palindrome value with this string .
+    // 5. If it is large than the previous one , we will swap it .
+    let newStr = str.split(" ") ;
+    console.log(newStr);
+    let max = "" ;
+    for (let i=0 ; i<newStr.length ; i++){
+     for (let j=0 ; j<newStr[i].length ; j++){
+      if(newStr[i][j]!=newStr[i][newStr[i].length-1-j]){          
+       break;    
+      } 
+      max.length < newStr[i].length ? max = newStr[i]: max;
+     }
+    }
+    console.log(max) ;
+      
+
+</script>
+
